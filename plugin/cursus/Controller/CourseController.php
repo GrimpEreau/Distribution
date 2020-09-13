@@ -89,7 +89,7 @@ class CourseController extends AbstractCrudController
             $user = $this->tokenStorage->getToken()->getUser();
 
             return [
-                'organization' => array_map(function (Organization $organization) {
+                'organizations' => array_map(function (Organization $organization) {
                     return $organization->getUuid();
                 }, $user->getOrganizations()),
             ];

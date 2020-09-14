@@ -13,7 +13,6 @@ namespace Claroline\MessageBundle\Controller\Contact;
 
 use Claroline\AppBundle\Controller\AbstractCrudController;
 use Claroline\MessageBundle\Entity\Contact\Options;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration as EXT;
 
 /**
  * @Route("/contact_options")

@@ -1,4 +1,3 @@
-
 <?php
 
 // src/AppBundle/Routing/ExtraLoader.php
@@ -111,7 +110,7 @@ class ApiLoader extends Loader
 
                     foreach ($this->reader->getClassAnnotations($refClass) as $annotation) {
                         //The route prefix is defined with the sf2 annotations
-                        if ($annotation instanceof RouteConfig) {
+                        if ($annotation instanceof Route) {
                             $prefix = $annotation->getPath();
 
                             if (0 === strpos($prefix, '/')) {
@@ -135,7 +134,7 @@ class ApiLoader extends Loader
 
                             foreach ($this->reader->getClassAnnotations($refClass) as $annotation) {
                                 //The route prefix is defined with the sf2 annotations
-                                if ($annotation instanceof RouteConfig) {
+                                if ($annotation instanceof Route) {
                                     $prefix = $annotation->getPath();
 
                                     if (0 === strpos($prefix, '/')) {

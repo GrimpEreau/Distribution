@@ -52,6 +52,10 @@ actions.receiveResponse = (apiRequest, status, statusText) => dispatch => {
   // we force the display of errors
   // this is a quick fix for components which maintain their own loader without managing errors
   const currentStatus = constants.HTTP_ALERT_STATUS[status]
+  console.log(currentStatus)
+  console.log(constants.HTTP_ACTIONS[apiRequest.request.method])
+  console.log(apiRequest.type)
+
   if (currentStatus && (!apiRequest.silent || alertConstants.ALERT_STATUS_ERROR === currentStatus)) {
     const currentAction = apiRequest.type || constants.HTTP_ACTIONS[apiRequest.request.method]
     if (alertConstants.ALERT_ACTIONS[currentAction][currentStatus]) {
